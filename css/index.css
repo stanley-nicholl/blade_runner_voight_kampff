@@ -1,0 +1,34 @@
+      body {
+        box-sizing: border-box;
+        font-size: 16px;
+        background-color: #000;
+      }
+
+      .container {
+        width: 90%;
+        margin: auto;
+      }
+
+      .scroll {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+        margin-top: 5rem;
+      }
+
+      marquee {
+        color: #fff;
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 1.75;
+        margin: auto;
+        max-height: 50rem;
+        text-shadow: #fff 1px 0px;
+      }
+
+      .replicant {
+        color: red;
+        font-weight: bold;
+        font-style: italic;
+      }

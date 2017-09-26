@@ -1,0 +1,49 @@
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #000;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.alert {
+  width: 100%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 4s steps(60, end);
+  width: 100%;
+}
+
+#english-alert {
+  color: #f617ff;
+  text-shadow: #f617ff 1px 1px;
+  font-size: 2.1rem;
+}
+
+#chinese-alert {
+  color: #5be4d4;
+  font-size: 2rem;
+  ;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+footer {
+  color: #fff;
+}
