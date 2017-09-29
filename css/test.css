@@ -12,7 +12,7 @@ body {
   left: 0;
   top: 0;
   z-index: 2;
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
 }
 
@@ -111,7 +111,7 @@ body {
 
 .bottom-section {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -155,13 +155,41 @@ body {
   padding-left: 1rem;
 }
 
-.test-area h3 {
+.test-head h2 {
   margin-bottom: 1.5rem;
   color: #43aa9a;
 }
 
 .question {
   width: 100%;
+}
+
+.question p {
+  color: #fff;
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+.test-progress-section {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.test-progress {
+  height: 20px;
+  width: 20px;
+  background-color: #f617ff;
+  margin-bottom: .8rem;
+}
+
+.active-progress {
+  height: 20px;
+  width: 20px;
+  background-color: #000;
+  border: 2px #43aa9a solid;
+  margin-bottom: .8rem;
 }
 
 .answers {
@@ -172,81 +200,39 @@ body {
 
 .answer {
   background-color: #fff;
-  border: solid red 4px;
+  border: solid #ff0000 4px;
   border-radius: 3px;
   width: 48%;
   height: 18vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.answer-title {
+  background-color: #ff0000;
+  color: #fff;
+  padding: .5rem;
 }
 
 .monitor-2 {
-  height: 18vh;
+  height: 40vh;
 }
 
-.monitor-3 {
-  height: 18vh;
+.monitor-2 video {
+  max-width: 90%;
+  height: auto;
 }
 
-
-/*HEART RATE*/
+.prompt {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin-bottom: .8rem;
+}
 
 .tryrell-office {
   align-self: center;
   margin: auto;
   width: 130%;
-}
-
-.heart-rate {
-  width: 125px;
-  height: 100px;
-  position: relative;
-  margin: 20px auto;
-}
-
-.fade-in {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  top: 0;
-  right: 0;
-  animation: heartRateIn 2.5s linear infinite;
-}
-
-.fade-out {
-  position: absolute;
-  width: 120%;
-  height: 100%;
-  top: 0;
-  left: -120%;
-  animation: heartRateOut 2.5s linear infinite;
-  background: rgba(0, 0, 0, 1);
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-  background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
-}
-
-@keyframes heartRateIn {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes heartRateOut {
-  0% {
-    left: -120%;
-  }
-  30% {
-    left: -120%;
-  }
-  100% {
-    left: 0;
-  }
 }

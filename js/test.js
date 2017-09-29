@@ -10,7 +10,9 @@ function progressBar() {
         setTimeout(function(){
           clearProgressInfo()
         }, 100)
-
+        setTimeout(function(){
+          launchTest()
+        }, 100)
     } else {
         width++;
         elem.style.width = width + '%';
@@ -37,6 +39,31 @@ function clearProgressInfo(){
   contentArea.removeChild(progressArea)
   contentArea.style.height = 0;
   body.removeChild(tempBG)
+}
+
+/*TEST LAUNCH SECTION*/
+
+function launchTest(){
+
+
+    navigator.getUserMedia({
+      video: true
+    }, function(stream) {
+      var video = document.getElementById("v");
+      var canvas = document.getElementById("c");
+      var button = document.getElementById("b");
+      video.srcObject = stream;
+      video.play();
+      button.disabled = false;
+      button.onclick = function() {
+        canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+        var img = canvas.toDataURL("image/png");
+        alert("done");
+      };
+    }, function(err) {
+      alert("there was an error " + err)
+    });
+
 }
 
 

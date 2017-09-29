@@ -1,0 +1,45 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #000;
+  letter-spacing: 2px;
+}
+
+
+/*
+PINK - #f617ff
+GREEN - #43aa9a
+*/
+
+.row {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+h4 {
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+
+#wanted-picture {
+  width: 22vw;
+  align-self: center;
+}
+
+.meta {
+  color: #f617ff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.data {
+  color: #43aa9a;
+  font-size: 1.5rem;
+}
