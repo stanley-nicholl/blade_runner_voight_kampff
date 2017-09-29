@@ -1,18 +1,32 @@
 body {
+  font-family: 'Orbitron', sans-serif;
   box-sizing: border-box;
   font-size: 16px;
   background-color: #000;
+  letter-spacing: 2px;
 }
 
 .container {
   width: 90%;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 4.5rem;
 }
 
 .alert {
   width: 100%;
   margin: auto;
+  margin-bottom: 4.5rem;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 4s steps(60, end);
+  width: 100%;
 }
 
 h3 {
@@ -27,15 +41,14 @@ h3 {
 }
 
 #english-alert {
-  color: #f617ff;
-  text-shadow: #f617ff 1px 1px;
-  font-size: 2.1rem;
+  color: #43aa9a;
+  /*text-shadow: #5be4d4 1px 1px;*/
+  font-size: 1.9rem;
 }
 
 #chinese-alert {
-  color: #5be4d4;
-  font-size: 2rem;
-  ;
+  color: #f617ff;
+  font-size: 1.8rem;
 }
 
 @keyframes type {
@@ -44,6 +57,108 @@ h3 {
   }
 }
 
-footer {
+.comply {
   color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+/*FORM SECTION*/
+
+
+/*text input from user*/
+
+.input-field {
+  color: #fff;
+}
+
+
+/* label color */
+
+.input-field label {
+  color: #fff;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+  color: #fff;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: #000;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label, .materialize-textarea:focus:not([readonly])+label {
+  color: #5be4d4 !important;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #43aa9a !important;
+  box-shadow: 0 1px 0 0 #43aa9a !important;
+}
+
+button {
+  /*background-color: #5be4d4 !important;*/
+}
+
+#comply {
+  width: 100%;
+  text-align: center;
+}
+
+.blink {
+  color: #f617ff;
+}
+
+.footer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+footer img {
+  margin: auto;
+}
+
+.tyrell-logo {
+  width: 10%;
 }

@@ -1,0 +1,51 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #000;
+  letter-spacing: 2px;
+}
+
+#temp-black-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.total {
+  width: 80%;
+  margin: auto;
+  height: 3rem;
+  border: solid 2px #f617ff;
+}
+
+#loading-test {
+  width: 100%;
+  text-align: center;
+}
+
+.blink {
+  color: #f617ff;
+}
+
+#progress {
+  width: 1%;
+  height: 3rem;
+  background-color: #43aa9a;
+  padding: -1px;
+}
+
+#progress-percent {
+  color: #43aa9a;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#b
