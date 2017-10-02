@@ -34,3 +34,11 @@ function complyWarning() {
 }
 
 complyWarning()
+
+function backgroundMusic(){
+    let bgMusic = new Audio('css/audio/processing_song.mp3');
+    bgMusic.play();
+    bgMusic.loop = true;
+}
+
+backgroundMusic()

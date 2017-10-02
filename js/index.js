@@ -1,3 +1,21 @@
+function openingAudio() {
+  let creditAudio = new Audio('css/audio/Opening_credits.mp3');
+  console.log(creditAudio);
+  creditAudio.play();
+}
+
+openingAudio()
+
+
+function explosion(){
+  setTimeout(function(){
+    let titleDrop = new Audio('css/audio/explosion.mp3');
+    titleDrop.play();
+  }, 18500)
+}
+
+explosion()
+
 function onTimerElapsed (ms) {
   let logo = document.getElementById('logo')
   let marquee = document.getElementById('scroll')
@@ -13,5 +31,5 @@ function onTimerElapsed (ms) {
 
   setTimeout(function(){
     window.location.href = "processing.html"
-  }, 2500)
+  }, 3500)
 }

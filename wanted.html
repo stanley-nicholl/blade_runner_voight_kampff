@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
   <link rel="stylesheet" href="css/materialize.min.css">
   <!-- Materialize JS -->
-  <link rel="stylesheet" href="js/materialize.min.js">
+  <!-- <link rel="stylesheet" href="js/materialize.min.js"> -->
   <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
   <!--Google Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,60 +26,81 @@
   <div class="main-content">
 
     <div class="side-ad">
-      <p>WANTED WANTED</p>
+      <p class="blink wanted-flash">WANTED WANTED</p>
     </div>
     <div class="container">
       <div class="row">
         <h1>WANTED</h1>
-        <h4>REPLICANT AT LARGE</h4>
+        <h4>WARRANT: replicant retirement</h4>
       </div>
       <div class="row">
-        <div class="col m1"></div>
-        <div class="col m4">
+        <div class="col m3">
           <img id="wanted-picture" src="" alt="">
         </div>
         <div class="col m1"></div>
-        <div class="col m6">
+        <div class="col m8">
           <div class="row">
-            <div class="col meta m4">
+            <div class="col meta m3">
               First Name:
             </div>
-            <div id="first-name" class="col data m8"></div>
+            <div id="first-name" class="col data m9"></div>
           </div>
           <div class="row">
-            <div class="col meta m4">
+            <div class="col meta m3">
               Last Name:
             </div>
-            <div id="last-name" class="col data m8"></div>
+            <div id="last-name" class="col data m9"></div>
           </div>
           <div class="row">
-            <div class="col meta m4">
+            <div class="col meta m3">
               Hair Color:
             </div>
-            <div id="hair" class="col data m8"></div>
+            <div id="hair" class="col data m9"></div>
           </div>
           <div class="row">
-            <div class="col meta m4">
+            <div class="col meta m3">
               Eye Color:
             </div>
-            <div id="eyes" class="col data m8"></div>
+            <div id="eyes" class="col data m9"></div>
+          </div>
+          <div class="row">
+            <div class="col meta m3">
+              Rep Type:
+            </div>
+            <div id="replicant" class="col data m9"></div>
           </div>
         </div>
       </div>
+      <div class="row center">
+        <div class="col m3 divider"></div>
+        <div class="col suspect-overview m6">
+          <p>Replicant should be considered armed and dangerous!</p>
+        </div>
+        <div class="col m3 divider"></div>
+
+      </div>
       <div class="row">
-        <div class="col suspect-overview m12">
-          <p>Replicant should be considered armed and dangerous. By law, it is required for you to report sightings.</p>
+        <div class="col m3 report">
+          <a id="btn-report" class="waves-effect waves-light btn-large" href="https://www.fandango.com/blade-runner-2049-198740/movie-overview"><i class="material-icons left">bug_report</i>Report replicant</a>
+        </div>
+        <div class="col m1 report"></div>
+        <div class="col m4 report">
+          <p><span>Issuing Blade Runner: </span><br>Rep-Detect Deckard 26354</p>
+        </div>
+        <div class="col m1 report"></div>
+        <div class="col m3 report">
+          <a id="btn-reset" class="waves-effect waves-light btn-large" href="#"><i class="material-icons right">border_color</i>Retake VK test</a>
         </div>
       </div>
+
     </div>
     <div class="side-ad">
-      <p>WANTED WANTED</p>
+      <p class="blink wanted-flash">WANTED WANTED</p>
     </div>
   </div>
 
   <marquee behavior="scroll" scrollamount="15" direction="left">
-    <p class="neon">Boundless riches, endless opportunity. OFF WORLD adventures await you! 無邊的財富，無盡的機會。關閉世界冒險等待著你！</p>
-    <div class="marquee-background"></div>
+    <p class="neon"><a href="http://www.imdb.com/videoplayer/vi1925888281">Boundless riches, endless opportunity. OFF WORLD adventures await you! 無邊的財富，無盡的機會。關閉世界冒險等待著你！</a></p>
   </marquee>
 </body>
 
