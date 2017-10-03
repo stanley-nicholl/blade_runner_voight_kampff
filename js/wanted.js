@@ -9,12 +9,17 @@ function loadWantedPoster() {
   let userData = JSON.parse(localStorage.getItem('userIntel'))
   let offWorld = new Audio('css/audio/off-world-ad.mp3');
   let neon = new Audio('css/audio/neon-light.mp3');
+  let image = localStorage.getItem('imgData')
   offWorld.loop = true;
   offWorld.play();
   neon.loop = true;
   neon.play();
   if(userData){
-    picture.src = 'css/images/roy_batty.jpg'
+    if (image) {
+      picture.src = image
+    }else{
+      picture.src = 'css/images/roy_batty.jpg'
+    }
     fname.textContent = userData['fname']
     lname.textContent = userData['lname']
     hair.textContent = userData['hair']

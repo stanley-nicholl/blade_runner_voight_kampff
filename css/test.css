@@ -138,7 +138,7 @@ body {
 .monitor-1 img {
   height: 80%;
   width: auto;
-  transition: 1s;
+  transition: .5s;
 }
 
 .test-area {
@@ -239,6 +239,18 @@ body {
   padding: .5rem;
 }
 
+.select {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  align-self: center;
+  margin-bottom: .5rem;
+  font-size: .8rem;
+  padding-left: .3rem;
+  padding-right: .3rem;
+}
+
 .monitor-2 {
   height: 40vh;
   display: flex;
@@ -271,4 +283,12 @@ body {
   align-self: center;
   margin: auto;
   width: 130%;
+}
+
+#canvas {
+  display: none;
+}
+
+#stream {
+  display: none;
 }

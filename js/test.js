@@ -10,6 +10,8 @@ let selection1 = document.getElementById('answer1')
 let selection2 = document.getElementById('answer2')
 let counter = 0;
 
+
+/*Load test page*/
 function progressBar() {
   var elem = document.getElementById("progress");
   var percent = document.getElementById("progress-percent")
@@ -40,33 +42,70 @@ function clearProgressInfo(){
   let tempBG = document.getElementById("temp-black-bg")
   let body = document.getElementsByTagName('body')[0]
   let test_intro = new Audio('css/audio/test_intro.mp3');
+  let startTest = document.getElementById('start')
   contentArea.removeChild(progressArea)
   contentArea.style.height = 0;
   body.removeChild(tempBG)
   test_intro.play();
+  setTimeout(function(){
+    startTest.textContent = 'START TEST'
+  }, 6300)
 }
 
 /*START TEST*/
 start.addEventListener('click', function(){
   let eyeScanner = document.getElementById('eye-scanner')
-  answerAreas[0].style.border = "solid #fff 4px"
-  answerAreas[0].style.border = "solid #fff 4px"
   question.removeChild(start)
-  //webcam stuff
-  //eye scanner
-  eyeScanner.style.transform = "rotate(45deg)"
+  webCam()
+  eyeScanner.style.transform = "rotate(22deg)"
   setTimeout(function(){
     eyeScanner.src = 'css/images/eye_scanner_on2.png'
-  }, 1000)
+  }, 2000)
   setTimeout(function(){
     eyeVideo.innerHTML = `<source  src="css/video/vk_eye_scanning.mp4" type="video/mp4" />
     Your browser does not support the video tag.`
-  }, 1700)
+  }, 4000)
   setTimeout(function(){
     question1()
   }, 200)
-  togglePrompt()
 })
+
+
+/*Launch webcam obtaining user promise*/
+function webCam(){
+  var width = 320;
+  var height = 0;
+  let video = null;
+  let canvas = null;
+  let photo = null;
+  var streaming = false;
+  navigator.mediaDevices.getUserMedia({video: true,  audio: false}).then(function(stream) {
+    let video = document.getElementById("stream");
+    let canvas = document.getElementById("canvas");
+    video.srcObject = stream;
+    video.addEventListener('canplay', function(ev){
+      if (!streaming) {
+        height = width / (4/3);
+        video.setAttribute('width', width);
+        video.setAttribute('height', height);
+        canvas.setAttribute('width', width);
+        canvas.setAttribute('height', height);
+        streaming = true;
+        takePicture(width, height, video, canvas)
+      }
+      }, false);
+  })
+}
+
+/*Take picture of user, convert to base64, and save to local storage*/
+function takePicture(width, height, video, canvas) {
+  let context = canvas.getContext('2d');
+  canvas.width = width;
+  canvas.height = height;
+  context.drawImage(video, 0, 0, width, height);
+  let data = canvas.toDataURL('image/png');
+  localStorage.setItem("imgData", data);
+}
 
 /*DISPLAY FIRST QUESTIN*/
 function question1(){
@@ -77,15 +116,16 @@ function question1(){
   backgroundNoise.volume = .3;
   backgroundNoise.play()
   testProg1.className = 'active-progress'
-  answerAreas[0].style.border = 'solid #fff 4px'
-  answerAreas[1].style.border = 'solid #fff 4px'
-  question.innerHTML = `<p>Question 1 of 3: It's your birthday. Someone gives you a calfskin wallet.</p>`
-  answerOption1.innerHTML = `<div class="answer-title">OPTION 1</div><p>I wouldn't accept it. Also, I'd report the person who gave it to me to the police.</p>`
-  answerOption2.innerHTML = `<div class="answer-title">OPTION 2</div><p>Why would I need a new wallet? Why's it made of calfskin?</p>`
   counter++
   setTimeout(function(){
     question1Audio.play();
-  }, 700)
+    togglePrompt()
+    answerAreas[0].style.border = 'solid #fff 4px'
+    answerAreas[1].style.border = 'solid #fff 4px'
+    question.innerHTML = `<p>Question 1 of 3: It's your birthday. Someone gives you a calfskin wallet.</p>`
+    answerOption1.innerHTML = `<div class="answer-title">OPTION 1</div><p>I wouldn't accept it. Also, I'd report the person who gave it to me to the police.</p><div style="cursor:pointer" class='select'>SELECT</div>`
+    answerOption2.innerHTML = `<div class="answer-title">OPTION 2</div><p>Why would I need a new wallet? Why's it made of calfskin?</p><div style="cursor:pointer" class='select'>SELECT</div>`
+  }, 1500)
 }
 
 /*DISPLAY SECOND AND THIRD QUESTIONS*/
@@ -97,8 +137,8 @@ function nextQuestion(){
     let testProg2 = document.getElementById('test-progress-2')
     testProg2.className = 'active-progress'
     question.innerHTML = `<p>Question 2 of 3: You've got a little boy. He shows you his butterfly collection plus the killing jar.</p>`
-    answerOption1.innerHTML = `<div class="answer-title">OPTION 1</div><p>I'd take him to the doctor.</p>`
-    answerOption2.innerHTML = `<div class="answer-title">OPTION 2</div><p>Why does he keep butterflies? Seems like a normal thing.</p>`
+    answerOption1.innerHTML = `<div class="answer-title">OPTION 1</div><p>I'd take him to the doctor.</p><div style="cursor:pointer" class='select'>SELECT</div>`
+    answerOption2.innerHTML = `<div class="answer-title">OPTION 2</div><p>Why does he keep butterflies? Seems like a normal thing.</p><div style="cursor:pointer" class='select'>SELECT</div>`
     question1Audio.play();
     counter++
   }else if(counter === 2){
@@ -106,14 +146,14 @@ function nextQuestion(){
     let testProg3 = document.getElementById('test-progress-3')
     testProg3.className = 'active-progress'
     question.innerHTML = `<p>Question 3 of 3: You're watching television. Suddenly you realize there's a wasp crawling on your arm.</p>`
-    answerOption1.innerHTML = `<div class="answer-title">OPTION 1</div><p>I'd kill it.</p>`
-    answerOption2.innerHTML = `<div class="answer-title">OPTION 2</div><p>Do they write these questions down for you? Or do you make them up?</p>`
+    answerOption1.innerHTML = `<div class="answer-title">OPTION 1</div><p>I'd KILL it.</p><div style="cursor:pointer" class='select'>SELECT</div>`
+    answerOption2.innerHTML = `<div class="answer-title">OPTION 2</div><p>Do they write these questions down for you? Or do you make them up?</p><div style="cursor:pointer" class='select'>SELECT</div>`
     question1Audio.play();
     counter++
   }else{
     setTimeout(function(){
       window.location.href = "wanted.html"
-    }, 2000)
+    }, 1000)
   }
 }
 
@@ -148,8 +188,6 @@ function togglePrompt(){
 /*Web cam SECTION*/
 
 // function webCam(){
-//
-//
 //     navigator.getUserMedia({
 //       video: true
 //     }, function(stream) {
@@ -167,7 +205,6 @@ function togglePrompt(){
 //     }, function(err) {
 //       alert("there was an error " + err)
 //     });
-//
 // }
 
 

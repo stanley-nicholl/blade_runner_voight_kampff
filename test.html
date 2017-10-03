@@ -4,18 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>VK-#456a26</title>
-  <!-- Materialize CDN -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
-  <!-- Materialize JS -->
-  <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
-  <!--Google Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet">
   <!-- Local Styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/test.css">
   <!-- JS and JQuery -->
+  <!-- <script src="js/webcam.js"></script> -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
   <script defer src="js/test.js"></script>
@@ -75,7 +70,7 @@
             <div id="test-progress-3" class="test-progress"></div>
           </div>
           <div class="question">
-            <a href="#" id="start">START TEST</a>
+            <a href="#" id="start"></a>
           </div>
         </div>
         <div class="answers">
@@ -94,7 +89,10 @@
     </div>
   </div>
 
+  <canvas id="canvas" width="300" height="300"></canvas>
+  <video id="stream">
 
+</video>
 </body>
 
 
