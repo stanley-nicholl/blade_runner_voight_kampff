@@ -31,5 +31,5 @@ function onTimerElapsed (ms) {
 
   setTimeout(function(){
     window.location.href = "processing.html"
-  }, 3500)
+  }, 3000)
 }

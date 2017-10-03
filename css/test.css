@@ -61,10 +61,11 @@ body {
 #loading-test {
   width: 100%;
   text-align: center;
+  color: #f617ff;
 }
 
 .blink {
-  color: #f617ff;
+  color: #000;
 }
 
 #progress {
@@ -79,7 +80,6 @@ body {
   text-align: center;
   font-size: 1.5rem;
 }
-
 
 /*TYRELL OFFICE*/
 
@@ -105,7 +105,6 @@ body {
   height: 1px;
   margin-bottom: 1rem;
 }
-
 
 /*TEST AREA*/
 
@@ -137,8 +136,9 @@ body {
 }
 
 .monitor-1 img {
-  max-height: 90%;
+  height: 80%;
   width: auto;
+  transition: 1s;
 }
 
 .test-area {
@@ -147,12 +147,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
   margin-left: 2rem;
   margin-right: 2rem;
   border: solid #f617ff 4px;
   border-radius: 3px;
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+#start {
+  color: #fff;
+  margin-top: 3rem;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
 }
 
 .test-head h2 {
@@ -162,11 +171,16 @@ body {
 
 .question {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .question p {
-  color: #fff;
-  font-size: .9rem;
+  color: #f617ff;
+  font-size: .8rem;
+  text-align: center;
+  width: 90%;
+  margin-top: 0;
   line-height: 1.4;
 }
 
@@ -178,16 +192,18 @@ body {
 }
 
 .test-progress {
-  height: 20px;
-  width: 20px;
-  background-color: #f617ff;
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  border: #f617ff 2px solid;
+  border-radius: 3px;
   margin-bottom: .8rem;
 }
 
 .active-progress {
-  height: 20px;
-  width: 20px;
-  background-color: #000;
+  height: 15px;
+  width: 15px;
+  background-color: #f617ff;
   border: 2px #43aa9a solid;
   margin-bottom: .8rem;
 }
@@ -199,8 +215,8 @@ body {
 }
 
 .answer {
-  background-color: #fff;
-  border: solid #ff0000 4px;
+  background-color: #000;
+  color: #f617ff;
   border-radius: 3px;
   width: 48%;
   height: 18vh;
@@ -209,18 +225,34 @@ body {
   justify-content: space-between;
 }
 
-.answer-title {
-  background-color: #ff0000;
+.answer p {
+  padding: .5rem;
+  font-size: .9rem;
+  line-height: 1.4;
   color: #fff;
+  text-align: center;
+}
+
+.answer-title {
+  background-color: #fff;
+  color: #000;
   padding: .5rem;
 }
 
 .monitor-2 {
   height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container {
+  border: 10px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .monitor-2 video {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -229,6 +261,10 @@ body {
   text-align: center;
   width: 100%;
   margin-bottom: .8rem;
+}
+
+.blink {
+  color: #000;
 }
 
 .tryrell-office {
