@@ -33,3 +33,5 @@ function onTimerElapsed (ms) {
     window.location.href = "processing.html"
   }, 3000)
 }
+
+onTimerElapsed(19000)

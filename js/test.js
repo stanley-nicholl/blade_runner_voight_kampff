@@ -113,7 +113,7 @@ function nextQuestion(){
   }else{
     setTimeout(function(){
       window.location.href = "wanted.html"
-    }, 3500)
+    }, 2000)
   }
 }
 

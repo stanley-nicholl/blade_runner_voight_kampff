@@ -13,6 +13,12 @@
   <!-- Font Awesome JS -->
   <!-- Google Font -->
   <!-- Local Styles -->
+  <script type="text/javascript">
+    let userData = JSON.parse(localStorage.getItem('userIntel'))
+    if (userData) {
+      window.location.href = "wanted.html"
+    }
+  </script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/index.css">
   <!-- Local JS -->
