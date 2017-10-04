@@ -6,6 +6,7 @@ have been outlawed on Earth. The only way to identify them is through a speciali
 site lets the user experience that for themselves and has a little fun with them at the end:
 
 * Orients the user to the enivronment of the 1982 depiction of 2019 Los Angeles
+* All the cheesy 80s graphics, music, and sound effects you can handle
 * Stores standard user information such as name, hair color, eye color, etc.
 * Conducts a three question Voight-Kampff test with Harrison Ford leading the way
 * Creates a customized "retirement" warrant for the user as they have been identified as a replicant
