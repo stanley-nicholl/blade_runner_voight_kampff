@@ -16,7 +16,7 @@ function progressBar() {
   var elem = document.getElementById("progress");
   var percent = document.getElementById("progress-percent")
   var width = 1;
-  var id = setInterval(frame, 10);
+  var id = setInterval(frame, 30);
   function frame() {
     if (width >= 100) {
         clearInterval(id);
@@ -57,7 +57,7 @@ start.addEventListener('click', function(){
   let eyeScanner = document.getElementById('eye-scanner')
   question.removeChild(start)
   webCam()
-  eyeScanner.style.transform = "rotate(22deg)"
+  eyeScanner.style.transform = "rotate(35deg)"
   setTimeout(function(){
     eyeScanner.src = 'css/images/eye_scanner_on2.png'
   }, 2000)

@@ -18,7 +18,7 @@ function loadWantedPoster() {
     if (image) {
       picture.src = image
     }else{
-      picture.src = 'css/images/roy_batty.jpg'
+      picture.src = 'css/images/punching_gossling.jpeg'
     }
     fname.textContent = userData['fname']
     lname.textContent = userData['lname']
@@ -26,7 +26,7 @@ function loadWantedPoster() {
     eyes.textContent = userData['eyes']
     replicantType.textContent = repType[Math.floor(Math.random()*repType.length)]
   }else{
-    picture.src = 'css/images/roy_batty.jpg'
+    picture.src = 'css/images/punching_gossling.jpeg'
     fname.textContent = "Roy"
     lname.textContent = "Batty"
     hair.textContent = "Blonde"
