@@ -1,3 +1,36 @@
+let userData = JSON.parse(localStorage.getItem('userIntel'))
+if (userData) {
+  window.location.href = "wanted.html"
+}
+
+function getOS() {
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'Mac OS';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'iOS';
+    window.location.href = "apology.html"
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'Windows';
+  } else if (/Android/.test(userAgent)) {
+    os = 'Android';
+    window.location.href = "apology.html"
+  }
+
+  if (window.matchMedia('screen and (max-width: 768px)').matches) {
+    window.location.href = "apology.html"
+  }
+
+}
+
+getOS()
+
 function openingAudio() {
   let creditAudio = new Audio('css/audio/Opening_credits.mp3');
   console.log(creditAudio);
