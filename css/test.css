@@ -12,7 +12,7 @@ body {
   left: 0;
   top: 0;
   z-index: 2;
-  height: 110vh;
+  height: 120vh;
   width: 120vw;
 }
 
@@ -293,42 +293,33 @@ body {
   display: none;
 }
 
-@media screen and (max-height: 980px) {
+@media screen and (max-height: 750px) {
   body {
     font-size: 12px;
   }
+  .test-head h2 {
+    font-size: 1rem;
+  }
   .answers {
     margin-bottom: .4rem;
+  }
+  .answer {
+    height: 15vh;
   }
   #start {
     margin-top: 1rem;
     font-size: 1rem;
   }
   .answer p {
-    padding: .25rem;
-    font-size: .8rem;
+    padding: .1rem;
+    font-size: .7rem;
     line-height: 1.1;
   }
-}
-
-@media screen and (max-width: 1100px), screen and (max-height: 840px) {
-  body {
-    font-size: 12px;
+  .select {
+    margin-bottom: .2rem;
+    font-size: .6rem;
   }
-  .answers {
-    margin-bottom: .4rem;
-  }
-  #start {
-    margin-top: 1rem;
-    font-size: 1rem;
-  }
-  .answer p {
-    padding: .25rem;
-    font-size: .8rem;
-    line-height: 1.1;
-  }
-  #eye-scanner {
-    width: 80%;
-    height: auto;
+  #office-setting {
+    width: 900px;
   }
 }
