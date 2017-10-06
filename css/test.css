@@ -13,7 +13,7 @@ body {
   top: 0;
   z-index: 2;
   height: 110vh;
-  width: 100vw;
+  width: 120vw;
 }
 
 #temp-black-bg-2 {
@@ -293,7 +293,7 @@ body {
   display: none;
 }
 
-@media screen and (max-height: 950px) {
+@media screen and (max-height: 980px) {
   body {
     font-size: 12px;
   }
@@ -302,11 +302,33 @@ body {
   }
   #start {
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .answer p {
     padding: .25rem;
     font-size: .8rem;
     line-height: 1.1;
+  }
+}
+
+@media screen and (max-width: 1100px), screen and (max-height: 840px) {
+  body {
+    font-size: 12px;
+  }
+  .answers {
+    margin-bottom: .4rem;
+  }
+  #start {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .answer p {
+    padding: .25rem;
+    font-size: .8rem;
+    line-height: 1.1;
+  }
+  #eye-scanner {
+    width: 80%;
+    height: auto;
   }
 }
