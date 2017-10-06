@@ -8,7 +8,6 @@ body {
   letter-spacing: 2px;
 }
 
-
 /*
 PINK - #f617ff
 GREEN - #43aa9a
@@ -84,6 +83,14 @@ h4 {
   align-items: center;
 }
 
+.col.meta {
+  font-size: 1.1rem;
+}
+
+.col.data {
+  font-size: 1.1rem;
+}
+
 .suspect-overview p {
   color: #fff;
   margin-top: 1.1rem;
@@ -92,7 +99,8 @@ h4 {
 }
 
 .divider {
-  border: 1px solid height: 5px;
+  border: 1px solid #fff;
+  height: 5px;
   width: 100%;
   background-color: #000;
 }
@@ -160,4 +168,17 @@ marquee {
 .neon a {
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-height: 800px) {
+  body {
+    font-size: 12px;
+  }
+  .wanted-flash {
+    padding-top: 1rem;
+    font-size: 3rem;
+  }
+  .col {
+    font-size: 1rem;
+  }
 }

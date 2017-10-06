@@ -63,9 +63,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-
 /*FORM SECTION*/
-
 
 /*text input from user*/
 
@@ -73,20 +71,17 @@ h3 {
   color: #fff;
 }
 
-
 /* label color */
 
 .input-field label {
   color: #fff;
 }
 
-
 /* label focus color */
 
 .input-field input[type=text]:focus+label {
   color: #fff;
 }
-
 
 /* label underline focus color */
 
@@ -95,14 +90,12 @@ h3 {
   box-shadow: 0 1px 0 0 #fff;
 }
 
-
 /* valid color */
 
 .input-field input[type=text].valid {
   border-bottom: 1px solid #fff;
   box-shadow: 0 1px 0 0 #fff;
 }
-
 
 /* invalid color */
 
@@ -111,20 +104,17 @@ h3 {
   box-shadow: 0 1px 0 0 #fff;
 }
 
-
 /* icon prefix focus color */
 
 .input-field .prefix.active {
   color: #000;
 }
 
-
 /* label focus color */
 
 .input-field input[type=text]:focus+label, .materialize-textarea:focus:not([readonly])+label {
   color: #5be4d4 !important;
 }
-
 
 /* label underline focus color */
 
@@ -161,4 +151,28 @@ footer img {
 
 .tyrell-logo {
   width: 10%;
+}
+
+@media only screen and (max-height: 700px) {
+  body {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+    margin-bottom: .5rem;
+  }
+  .comply {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer {
+    margin-top: 1rem;
+  }
+  .footer img {
+    width: 4rem;
+  }
 }
