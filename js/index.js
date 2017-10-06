@@ -27,6 +27,10 @@ function getOS() {
     window.location.href = "apology.html"
   }
 
+  if (window.matchMedia('screen and (max-height: 720px)').matches) {
+    window.location.href = "apology.html"
+  }
+
 }
 
 getOS()
