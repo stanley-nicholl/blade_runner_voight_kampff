@@ -88,6 +88,10 @@ body {
   justify-content: center;
 }
 
+.tyrell-office-small {
+  display: none
+}
+
 .side {
   display: flex;
   justify-content: center;
@@ -305,6 +309,7 @@ body {
   }
   .answer {
     height: 15vh;
+    width: 48%;
   }
   #start {
     margin-top: 1rem;
@@ -319,7 +324,15 @@ body {
     margin-bottom: .2rem;
     font-size: .6rem;
   }
-  #office-setting {
-    width: 900px;
+  .tyrell-office-small {
+    display: block;
+    height: 40vh;
+  }
+  .tyrell-office-big {
+    display: none;
+  }
+  .question p {
+    font-size: .7rem;
+    line-height: 1.2;
   }
 }
