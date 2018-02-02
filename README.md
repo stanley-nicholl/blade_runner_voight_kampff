@@ -20,6 +20,7 @@ Clone this repository and then simply open `index.html` with your favorite brows
 
 ## Next Steps
 
+- [ ] Enable webcam api for Firefox, Mozilla, and Edge browsers
 - [ ] Apply additional filtering to increase the 80s look and feel
 - [ ] Increase the "real" feeling of the VK test and improve audio editing
 - [ ] Ability to share wanted poster on social media
